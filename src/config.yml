@@ -12,6 +12,7 @@ validLogMaterials:
   - SPRUCE_LOG
   - WARPED_STEM
   - CRIMSON_STEM
+  - CHERRY_LOG
 validAxeMaterials:
   - DIAMOND_AXE
   - GOLDEN_AXE
