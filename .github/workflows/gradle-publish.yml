@@ -13,5 +13,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Switch to src dir
+        run: cd src
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
