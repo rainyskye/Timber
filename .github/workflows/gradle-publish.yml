@@ -1,19 +1,31 @@
-name: I have no idea what im doing
+name: AAAAAAAAAAAAAAA
+
 on:
- push:
-   branches: [ master ]
- pull_request:
-   branches: [ master ]
- workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
- build:
-   runs-on: ubuntu-latest
-   steps:
-    - uses: actions/checkout@v3
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Java
+      uses: actions/setup-java@v2
       with:
-        java-version: 17
-    - name: Build with Maven
-      run: mvn clean package
+        java-version: '17'
+        
+    - name: Build Minecraft Plugin
+      run: ./gradlew build  # Replace with your build command
+      
+    - name: test ls
+      run: ls
+      
+#    - name: Archive plugin
+#      uses: actions/upload-artifact@v2
+#      with:
+#        name: build-test  # Replace with your plugin name
+#        path: ./build.jar  # Replace with the path to your built artifact
