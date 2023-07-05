@@ -18,6 +18,7 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '17'
+        distribution: 'zulu'
         
     - name: Build Minecraft Plugin
       run: ./gradlew build  # Replace with your build command
